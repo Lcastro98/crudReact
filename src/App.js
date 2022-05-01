@@ -12,15 +12,20 @@ function App() {
   ]
 
   //state
-  const [users, setUser] = useState(usersData);
+  const [users, setUsers] = useState(usersData);
 
   //Agregar Usuarios
   const addUser = (user) => {
     user.id = uuidv4()
-    setUser([
+    setUsers([
       ...users,
       user
     ])
+  }
+
+  //Eliminar usuarios
+  const deleteUser = (id) => {
+    setUsers(users.filter(user => user.id !== id));
   }
 
   return (
@@ -33,7 +38,7 @@ function App() {
         </div>
         <div className="flex-large">
           <h2>View users</h2>
-          <UserTable users={users}/>
+          <UserTable users={users} deleteUser={deleteUser}/>
         </div>
       </div>
     </div>
