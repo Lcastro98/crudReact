@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UserTable from './components/UserTable';
 import { v4 as uuidv4 } from 'uuid';
 import AddUserForm from './components/AddUserForm';
@@ -14,6 +14,17 @@ function App() {
 
   //state
   const [users, setUsers] = useState(usersData);
+
+  useEffect(() => {
+    const data = localStorage.getItem('Data');
+    if (data) {
+      setUsers(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('Data', JSON.stringify(users))
+  });
 
   //Agregar Usuarios
   const addUser = (user) => {

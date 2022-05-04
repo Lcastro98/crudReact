@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const AddUserForm = (props) => {
-
+    
     const {register, formState: {errors}, handleSubmit} = useForm();
 
     const onSubmit = (data, e) => {
@@ -14,11 +14,12 @@ const AddUserForm = (props) => {
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
             <label>Name</label>
-            <input 
+            <input               
                 {...register("name", {
                     required: "Campo Requerido"
                 })}
-                type="text"/>
+                type="text"
+                />
             {
                 errors.name &&
                 <div>
@@ -30,7 +31,8 @@ const AddUserForm = (props) => {
                 {...register("username", {
                     required: "Campo Requerido"
                 })}
-                type="text"/>
+                type="text"
+                />
             {
                 errors.username &&
                 <div>
