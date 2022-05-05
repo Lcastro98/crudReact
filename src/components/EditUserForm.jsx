@@ -9,6 +9,7 @@ const EditUserForm = (props) => {
 
     setValue('name', props.currentUser.name);
     setValue('username', props.currentUser.username);
+    setValue('email', props.currentUser.email);
 
     const onSubmit = (data, e) => {
         console.log(data)
@@ -41,6 +42,18 @@ const EditUserForm = (props) => {
                 errors.username &&
                 <div>
                     {errors.username.message}
+                </div>
+            }
+            <label>Email</label>
+            <input 
+                {...register("email", {
+                    required: "Campo Requerido"
+                })}
+                type="email"/>
+            {
+                errors.email &&
+                <div>
+                    {errors.email.message}
                 </div>
             }
             <button>Edit user</button>

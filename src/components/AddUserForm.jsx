@@ -19,6 +19,7 @@ const AddUserForm = (props) => {
                     required: "Campo Requerido"
                 })}
                 type="text"
+                placeholder='Enter your name'
                 />
             {
                 errors.name &&
@@ -32,11 +33,26 @@ const AddUserForm = (props) => {
                     required: "Campo Requerido"
                 })}
                 type="text"
+                placeholder='Enter your username'
                 />
             {
                 errors.username &&
                 <div>
                     {errors.username.message}
+                </div>
+            }
+            <label>Email</label>
+            <input 
+                {...register("email", {
+                    required: "Campo Requerido"
+                })}
+                type="email"
+                placeholder='Enter your email'
+                />
+            {
+                errors.email &&
+                <div>
+                    {errors.email.message}
                 </div>
             }
             <button>Add new user</button>

@@ -7,9 +7,9 @@ import EditUserForm from './components/EditUserForm';
 function App() {
 
   const usersData = [
-    { id: uuidv4(), name: 'Lorena', username: 'Anezoldyck' },
-    { id: uuidv4(), name: 'Felipe', username: 'Nirsch' },
-    { id: uuidv4(), name: 'Hernán', username: 'Crown' },
+    { id: uuidv4(), name: 'Lorena', username: 'Anezoldyck', email: 'lorena@gmail.com' },
+    { id: uuidv4(), name: 'Felipe', username: 'Nirsch', email: 'felipe@gmail.com' },
+    { id: uuidv4(), name: 'Hernán', username: 'Crown', email: 'hernan@gmail.com' },
   ]
 
   //state
@@ -44,13 +44,13 @@ function App() {
   const [editing, setEditing] = useState(false);
 
   const [currentUser, serCurrentUser] = useState({
-    id: null, name: '', username: ''
+    id: null, name: '', username: '', email: ''
   });
 
   const editRow = (user) => {
     setEditing(true);
     serCurrentUser({
-      id: user.id, name: user.name, username: user.username
+      id: user.id, name: user.name, username: user.username, email: user.email
     })
   }
 
