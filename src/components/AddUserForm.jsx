@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 
 const AddUserForm = (props) => {
     
@@ -9,6 +10,14 @@ const AddUserForm = (props) => {
         console.log(data)
         props.addUser(data)
         e.target.reset();
+    }
+
+    const addAlert = () => {
+        swal({
+            title: "Added!",
+            text: "The user was successfully added",
+            icon: "success"
+        });
     }
 
     return ( 
@@ -55,7 +64,7 @@ const AddUserForm = (props) => {
                     {errors.email.message}
                 </div>
             }
-            <button>Add new user</button>
+            <button onClick={() => addAlert()}>Add new user</button>
         </form>
      );
 }

@@ -1,6 +1,24 @@
 import React from 'react'
+import swal from 'sweetalert';
 
 const UserTable = (props) => {
+
+    const deleteAlert = (user) => {
+        swal({
+            title: "Delete",
+            text: "Are you sure you want to delete this user?",
+            icon: "warning",
+            buttons: ["No", "Yes"],
+        }).then(respuesta => {
+            if(respuesta){
+                swal({text: "The user was successfully deleted",
+                icon: "success"})
+                props.deleteUser(user.id)
+            }
+            return respuesta
+        })
+    }
+
     return ( 
         <table>
             <thead>
@@ -28,7 +46,7 @@ const UserTable = (props) => {
                             </button>
                             <button 
                                 className="button muted-button"
-                                onClick={() => {props.deleteUser(user.id)}}
+                                onClick={() => deleteAlert(user)}
                             >
                                 Delete
                             </button>

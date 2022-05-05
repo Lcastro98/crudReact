@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 
 const EditUserForm = (props) => {
 
@@ -16,6 +17,14 @@ const EditUserForm = (props) => {
         data.id = props.currentUser.id
         props.updateUser(props.currentUser.id, data)
         e.target.reset();
+    }
+
+    const editAlert = () => {
+        swal({
+            title: "Edited!",
+            text: "The user was successfully edited",
+            icon: "success"
+        })
     }
 
     return ( 
@@ -56,7 +65,7 @@ const EditUserForm = (props) => {
                     {errors.email.message}
                 </div>
             }
-            <button>Edit user</button>
+            <button onClick={() => editAlert()}>Edit user</button>
         </form>
      );
 }
