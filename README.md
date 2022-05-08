@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Crud React 👥
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Crud de usuarios. Permite crear usuarios, listarlos, editarlos y eliminarlos.
 
-## Available Scripts
+### Criterios: 
+- Se debe contar con un sistema de control de versiones para evidenciar la solución realizada por cada estudiante.
+- Se debe evidenciar al menos 3 commits con el avance del proyecto.
+- Los commit debe ser descriptivos, claro, concretos y analizados. 
+- Se debe realizar por lo menos 3 mejoras del aplicativo (1 de las 3 mejoras debe ser la utilización de LocalStorage las otras 2 usted tiene la libertad de escoger)
 
-In the project directory, you can run:
+## Construido con 🛠️
 
-### `npm start`
+- [React](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preparando el entorno 🔧
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para empezar clone el repositorio en su computador:
+```plain
+git clone https://github.com/Lcastro98/crud_react.git
+```
+Abra el archivo en visual studio code y con una nueva terminal instale las dependencias con el siguiente comando:
+```plain
+npm install
+```
+ejecute el siguiente comando:
+```plain
+npm start
+```
+Esto abrirá el siguiente puerto [http://localhost:3000](http://localhost:3000) para ver en su navegador la aplicación.
 
-### `npm test`
+## Mejoras
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### LocalStorage
 
-### `npm run build`
+Se agrega el uso del local storage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![alt text](https://github.com/Lcastro98/crud_react/blob/main/public/localStorage.JPG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Nuevo input y placeholders
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se agrega un nuevo campo para solicitar el correo y se ponen placeholders para cada input
 
-### `npm run eject`
+![alt text](https://github.com/Lcastro98/crud_react/blob/main/public/addUser.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Mensajes de confirmación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Antes de borrar un usuario, muestra un mensaje de confirmación, solo se elimina si se presiona el botón "yes"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![alt text](https://github.com/Lcastro98/crud_react/blob/main/public/alert.JPG)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Finalmente se muestra un mensaje que confirma la eliminación del usuario
 
-## Learn More
+![alt text](https://github.com/Lcastro98/crud_react/blob/main/public/success.JPG)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Video
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+⌨️ con ❤️ por [Lorena Castro](https://github.com/Lcastro98) ✌
