@@ -54,6 +54,9 @@ Finalmente se muestra un mensaje que confirma la eliminación del usuario
 
 ## Video
 
+Puedes ver un video explicando las mejoras en el siguiente link.
+
+https://youtu.be/OhtsLpUMe7o
 
 
 ---
